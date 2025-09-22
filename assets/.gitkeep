@@ -1,0 +1,17 @@
+# Assets folder for images
+# Replace the logo.jpeg placeholder with your actual company logo
+# Add product images here and update the image URLs in products.js
+
+## Image Requirements:
+- logo.jpeg: Company logo (recommended: 200x200px, square format)
+- Product images: High-quality product photos (recommended: 400x400px minimum)
+
+## Current placeholders:
+- Using Unsplash URLs for product images (replace with your actual product photos)
+- logo.jpeg referenced but needs to be added
+
+## To update:
+1. Add your logo as assets/logo.jpeg
+2. Replace Unsplash URLs in products.js with your product image paths
+3. Add product images to this folder
+4. Update manifest.json icons if needed
