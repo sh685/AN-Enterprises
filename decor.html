@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Décor Products - AN Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="index.html" class="nav__logo">
+                    <span class="logo-text">AN Enterprises</span>
+                </a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="kitchen.html" class="nav__link">Kitchen</a></li>
+                    <li><a href="decor.html" class="nav__link active">Décor</a></li>
+                    <li><a href="index.html#about" class="nav__link">About Us</a></li>
+                    <li><a href="index.html#contact" class="nav__link">Contact</a></li>
+                    <li><a href="#cart" class="nav__link cart-link">
+                        Cart (<span id="cart-count">0</span>)
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Décor Hero -->
+    <section class="category-hero decor-hero">
+        <div class="hero__container container">
+            <div class="hero__content">
+                <h1 class="hero__title">Home Décor</h1>
+                <p class="hero__description">Artistic pieces and elegant accessories to beautify your living space</p>
+                <div class="hero__stats">
+                    <div class="stat">
+                        <span class="stat__number">40+</span>
+                        <span class="stat__label">Décor Items</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">Artistic</span>
+                        <span class="stat__label">Design</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__image">
+                <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg" alt="Décor Products">
+            </div>
+        </div>
+    </section>
+
+    <!-- Décor Categories -->
+    <section class="subcategories">
+        <div class="container">
+            <h2 class="section__title">Décor Categories</h2>
+            <div class="subcategory__grid">
+                <div class="subcategory__item" data-filter="wall-art">
+                    <img src="https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg" alt="Wall Art">
+                    <h3>Wall Art</h3>
+                </div>
+                <div class="subcategory__item" data-filter="lighting">
+                    <img src="https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg" alt="Lighting">
+                    <h3>Lighting</h3>
+                </div>
+                <div class="subcategory__item" data-filter="sculptures">
+                    <img src="https://images.pexels.com/photos/6195104/pexels-photo-6195104.jpeg" alt="Sculptures">
+                    <h3>Sculptures</h3>
+                </div>
+                <div class="subcategory__item" data-filter="textiles">
+                    <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" alt="Textiles">
+                    <h3>Textiles</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Décor Products -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section__title">Décor Products</h2>
+            <div class="filter__tabs">
+                <button class="filter__btn active" data-filter="all">All Products</button>
+                <button class="filter__btn" data-filter="wall-art">Wall Art</button>
+                <button class="filter__btn" data-filter="lighting">Lighting</button>
+                <button class="filter__btn" data-filter="sculptures">Sculptures</button>
+                <button class="filter__btn" data-filter="textiles">Textiles</button>
+            </div>
+            <div class="products__grid" id="decor-products-grid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart__sidebar" id="cart-sidebar">
+        <div class="cart__header">
+            <h3>Shopping Cart</h3>
+            <button class="cart__close" id="cart-close">&times;</button>
+        </div>
+        <div class="cart__items" id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart__footer">
+            <div class="cart__total">
+                <strong>Total: ₹<span id="cart-total">0</span></strong>
+            </div>
+            <button class="btn btn--primary cart__checkout">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>AN Enterprises</h3>
+                    <p>Premium home products for modern living</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="kitchen.html">Kitchen</a></li>
+                        <li><a href="decor.html">Décor</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="kitchen.html">Kitchen</a></li>
+                        <li><a href="decor.html">Décor</a></li>
+                        <li><a href="index.html#home">Smart Home</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 AN Enterprises. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="decor.js"></script>
+</body>
+</html>

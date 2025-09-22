@@ -1,0 +1,41 @@
+{
+  "name": "AN Enterprises",
+  "short_name": "AN Enterprises",
+  "description": "Premium Home, Kitchen & Décor Products",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#636B2F",
+  "theme_color": "#636B2F",
+  "orientation": "portrait-primary",
+  "categories": ["shopping", "lifestyle"],
+  "lang": "en-IN",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "assets/logo.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/logo.jpeg", 
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshot1.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    },
+    {
+      "src": "assets/screenshot2.jpg",
+      "sizes": "720x1280", 
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    }
+  ]
+}

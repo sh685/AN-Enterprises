@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AN Enterprises - Home Decor & Kitchen Essentials</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__nav">
+                    <div class="nav__left">
+                        <a href="index.html" class="logo">
+                            <span class="logo__text">AN</span>
+                            <span class="logo__sub">Enterprises</span>
+                        </a>
+                        <nav class="nav__menu">
+                            <a href="#home" class="nav__link">HOME</a>
+                            <a href="#kitchen" class="nav__link">KITCHEN</a>
+                            <a href="#decor" class="nav__link">DECOR</a>
+                            <a href="#furniture" class="nav__link">FURNITURE</a>
+                            <a href="#lighting" class="nav__link">LIGHTING</a>
+                            <a href="#storage" class="nav__link">STORAGE</a>
+                        </nav>
+                    </div>
+                    
+                    <div class="search__container">
+                        <div class="search__box">
+                            <i class="fas fa-search search__icon"></i>
+                            <input type="text" placeholder="Search for products, brands and more" class="search__input">
+                        </div>
+                    </div>
+                    
+                    <div class="nav__actions">
+                        <div class="action__item">
+                            <i class="far fa-user"></i>
+                            <span>Profile</span>
+                        </div>
+                        <div class="action__item" id="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                            <span>Wishlist</span>
+                            <span class="count" id="wishlist-count">0</span>
+                        </div>
+                        <div class="action__item" id="cart-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Bag</span>
+                            <span class="count" id="cart-count">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mobile__menu-toggle" id="mobile-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Search -->
+        <div class="mobile__search">
+            <div class="container">
+                <div class="search__box">
+                    <i class="fas fa-search search__icon"></i>
+                    <input type="text" placeholder="Search for products, brands and more" class="search__input">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero" id="home">
+        <div class="hero__slider">
+            <div class="hero__slide active">
+                <img src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg" alt="Modern Home Collection">
+                <div class="hero__content">
+                    <h1>Transform Your Home</h1>
+                    <p>Discover premium home essentials with up to 50% off</p>
+                    <button class="btn btn--primary">SHOP NOW</button>
+                </div>
+            </div>
+            <div class="hero__slide">
+                <img src="https://images.pexels.com/photos/1599791/pexels-photo-1599791.jpeg" alt="Kitchen Collection">
+                <div class="hero__content">
+                    <h1>Kitchen Essentials</h1>
+                    <p>Premium cookware and appliances for modern kitchens</p>
+                    <button class="btn btn--primary">EXPLORE KITCHEN</button>
+                </div>
+            </div>
+            <div class="hero__slide">
+                <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg" alt="Decor Collection">
+                <div class="hero__content">
+                    <h1>Home Décor</h1>
+                    <p>Artistic pieces to beautify your living space</p>
+                    <button class="btn btn--primary">SHOP DECOR</button>
+                </div>
+            </div>
+        </div>
+        <div class="hero__dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Promotional Strip -->
+    <section class="promo__strip">
+        <div class="container">
+            <div class="promo__items">
+                <div class="promo__item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>FREE DELIVERY</span>
+                </div>
+                <div class="promo__item">
+                    <i class="fas fa-undo"></i>
+                    <span>30 DAYS RETURN</span>
+                </div>
+                <div class="promo__item">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 SUPPORT</span>
+                </div>
+                <div class="promo__item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>100% AUTHENTIC</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Circles -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section__title">SHOP BY CATEGORY</h2>
+            <div class="category__grid">
+                <div class="category__item" data-category="kitchen">
+                    <div class="category__circle">
+                        <img src="https://images.pexels.com/photos/1599791/pexels-photo-1599791.jpeg" alt="Kitchen">
+                    </div>
+                    <h3>Kitchen</h3>
+                </div>
+                <div class="category__item" data-category="decor">
+                    <div class="category__circle">
+                        <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg" alt="Decor">
+                    </div>
+                    <h3>Décor</h3>
+                </div>
+                <div class="category__item" data-category="furniture">
+                    <div class="category__circle">
+                        <img src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg" alt="Furniture">
+                    </div>
+                    <h3>Furniture</h3>
+                </div>
+                <div class="category__item" data-category="lighting">
+                    <div class="category__circle">
+                        <img src="https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg" alt="Lighting">
+                    </div>
+                    <h3>Lighting</h3>
+                </div>
+                <div class="category__item" data-category="storage">
+                    <div class="category__circle">
+                        <img src="https://images.pexels.com/photos/6492397/pexels-photo-6492397.jpeg" alt="Storage">
+                    </div>
+                    <h3>Storage</h3>
+                </div>
+                <div class="category__item" data-category="home">
+                    <div class="category__circle">
+                        <img src="https://images.pexels.com/photos/4112236/pexels-photo-4112236.jpeg" alt="Smart Home">
+                    </div>
+                    <h3>Smart Home</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deals Section -->
+    <section class="deals">
+        <div class="container">
+            <div class="deals__header">
+                <h2>DEAL OF THE DAY</h2>
+                <div class="countdown" id="countdown">
+                    <div class="time__unit">
+                        <span class="time__value" id="hours">12</span>
+                        <span class="time__label">Hours</span>
+                    </div>
+                    <div class="time__unit">
+                        <span class="time__value" id="minutes">34</span>
+                        <span class="time__label">Minutes</span>
+                    </div>
+                    <div class="time__unit">
+                        <span class="time__value" id="seconds">56</span>
+                        <span class="time__label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+            <div class="deals__grid">
+                <div class="deal__item">
+                    <img src="https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg" alt="Smart Speaker">
+                    <div class="deal__content">
+                        <h3>Smart Bluetooth Speaker</h3>
+                        <div class="deal__price">
+                            <span class="current__price">₹2,999</span>
+                            <span class="original__price">₹4,999</span>
+                            <span class="discount">40% OFF</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="deal__item">
+                    <img src="https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg" alt="LED Lamp">
+                    <div class="deal__content">
+                        <h3>Designer LED Lamp</h3>
+                        <div class="deal__price">
+                            <span class="current__price">₹1,799</span>
+                            <span class="original__price">₹2,999</span>
+                            <span class="discount">40% OFF</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="deal__item">
+                    <img src="https://images.pexels.com/photos/4226796/pexels-photo-4226796.jpeg" alt="Cookware Set">
+                    <div class="deal__content">
+                        <h3>Premium Cookware Set</h3>
+                        <div class="deal__price">
+                            <span class="current__price">₹6,299</span>
+                            <span class="original__price">₹8,999</span>
+                            <span class="discount">30% OFF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="filter__bar" id="filter-bar">
+        <div class="container">
+            <div class="filter__left">
+                <span class="filter__title">FILTERS</span>
+                <div class="filter__options">
+                    <select class="filter__select" id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="kitchen">Kitchen</option>
+                        <option value="decor">Décor</option>
+                        <option value="home">Smart Home</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="lighting">Lighting</option>
+                    </select>
+                    <select class="filter__select" id="price-filter">
+                        <option value="all">All Prices</option>
+                        <option value="0-2000">Under ₹2,000</option>
+                        <option value="2000-5000">₹2,000 - ₹5,000</option>
+                        <option value="5000-10000">₹5,000 - ₹10,000</option>
+                        <option value="10000+">Above ₹10,000</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter__right">
+                <select class="sort__select" id="sort-select">
+                    <option value="recommended">Recommended</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">What's New</option>
+                    <option value="rating">Customer Rating</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="products__header">
+                <h2>PRODUCTS FOR YOU</h2>
+                <span class="products__count" id="products-count">26 Items</span>
+            </div>
+            <div class="products__grid" id="products-grid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Strip -->
+    <section class="brands">
+        <div class="container">
+            <h2 class="section__title">FEATURED BRANDS</h2>
+            <div class="brands__grid">
+                <div class="brand__item">
+                    <img src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg" alt="Premium Home">
+                    <h3>Premium Home</h3>
+                </div>
+                <div class="brand__item">
+                    <img src="https://images.pexels.com/photos/1599791/pexels-photo-1599791.jpeg" alt="Kitchen Pro">
+                    <h3>Kitchen Pro</h3>
+                </div>
+                <div class="brand__item">
+                    <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg" alt="Décor Studio">
+                    <h3>Décor Studio</h3>
+                </div>
+                <div class="brand__item">
+                    <img src="https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg" alt="Light House">
+                    <h3>Light House</h3>
+                </div>
+                <div class="brand__item">
+                    <img src="https://images.pexels.com/photos/4112236/pexels-photo-4112236.jpeg" alt="Smart Living">
+                    <h3>Smart Living</h3>
+                </div>
+                <div class="brand__item">
+                    <img src="https://images.pexels.com/photos/6544378/pexels-photo-6544378.jpeg" alt="Modern Tech">
+                    <h3>Modern Tech</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart__sidebar" id="cart-sidebar">
+        <div class="cart__header">
+            <h3>SHOPPING BAG</h3>
+            <button class="cart__close" id="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart__items" id="cart-items">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart__footer">
+            <div class="cart__total">
+                <span>Total: ₹<span id="cart-total">0</span></span>
+            </div>
+            <button class="btn btn--primary cart__checkout">PLACE ORDER</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist__sidebar" id="wishlist-sidebar">
+        <div class="wishlist__header">
+            <h3>MY WISHLIST</h3>
+            <button class="wishlist__close" id="wishlist-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="wishlist__items" id="wishlist-items">
+            <!-- Wishlist items will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>AN Enterprises</h3>
+                    <p>Premium home products for modern living</p>
+                    <div class="social__links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <h4>CUSTOMER SERVICE</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Track Your Order</a></li>
+                        <li><a href="#">Return & Exchange</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>COMPANY</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>CONNECT</h4>
+                    <ul>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 AN Enterprises. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
