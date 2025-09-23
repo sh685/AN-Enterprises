@@ -462,11 +462,11 @@ function showNotification(message) {
         position: fixed;
         top: 100px;
         right: 20px;
-        background: #ff3f6c;
+        background: #333;
         color: white;
         padding: 1rem 2rem;
         border-radius: 4px;
-        box-shadow: 0 4px 12px rgba(255, 63, 108, 0.3);
+        box-shadow: 0 4px 12px rgba(51, 51, 51, 0.3);
         z-index: 3000;
         opacity: 0;
         transform: translateX(100px);
