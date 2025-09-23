@@ -5,58 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Décor Products - AN Enterprises</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header" id="header">
-        <nav class="nav container">
-            <div class="nav__data">
-                <a href="index.html" class="nav__logo">
-                    <span class="logo-text">AN Enterprises</span>
-                </a>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <div class="header__top">
+            <div class="container">
+                <div class="header__nav">
+                    <div class="nav__left">
+                        <a href="index.html" class="logo">
+                            <span class="logo__text">AN</span>
+                            <span class="logo__sub">Enterprises</span>
+                        </a>
+                        <nav class="nav__menu">
+                            <a href="index.html" class="nav__link">HOME</a>
+                            <a href="kitchen.html" class="nav__link">KITCHEN</a>
+                            <a href="decor.html" class="nav__link active">DECOR</a>
+                            <a href="#furniture" class="nav__link">FURNITURE</a>
+                            <a href="#lighting" class="nav__link">LIGHTING</a>
+                            <a href="#storage" class="nav__link">STORAGE</a>
+                        </nav>
+                    </div>
+                    
+                    <div class="search__container">
+                        <div class="search__box">
+                            <i class="fas fa-search search__icon"></i>
+                            <input type="text" placeholder="Search for products, brands and more" class="search__input">
+                        </div>
+                    </div>
+                    
+                    <div class="nav__actions">
+                        <div class="action__item">
+                            <i class="far fa-user"></i>
+                            <span>Profile</span>
+                        </div>
+                        <div class="action__item" id="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                            <span>Wishlist</span>
+                            <span class="count" id="wishlist-count">0</span>
+                        </div>
+                        <div class="action__item" id="cart-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Bag</span>
+                            <span class="count" id="cart-count">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mobile__menu-toggle" id="mobile-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </div>
             </div>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li><a href="index.html" class="nav__link">Home</a></li>
-                    <li><a href="kitchen.html" class="nav__link">Kitchen</a></li>
-                    <li><a href="decor.html" class="nav__link active">Décor</a></li>
-                    <li><a href="index.html#about" class="nav__link">About Us</a></li>
-                    <li><a href="index.html#contact" class="nav__link">Contact</a></li>
-                    <li><a href="#cart" class="nav__link cart-link">
-                        Cart (<span id="cart-count">0</span>)
-                    </a></li>
-                </ul>
+        </div>
+        
+        <!-- Mobile Search -->
+        <div class="mobile__search">
+            <div class="container">
+                <div class="search__box">
+                    <i class="fas fa-search search__icon"></i>
+                    <input type="text" placeholder="Search for products, brands and more" class="search__input">
+                </div>
             </div>
-        </nav>
+        </div>
     </header>
 
     <!-- Décor Hero -->
     <section class="category-hero decor-hero">
-        <div class="hero__container container">
-            <div class="hero__content">
-                <h1 class="hero__title">Home Décor</h1>
-                <p class="hero__description">Artistic pieces and elegant accessories to beautify your living space</p>
-                <div class="hero__stats">
-                    <div class="stat">
-                        <span class="stat__number">40+</span>
-                        <span class="stat__label">Décor Items</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat__number">Artistic</span>
-                        <span class="stat__label">Design</span>
+        <div class="container">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Home Décor</h1>
+                    <p class="hero__description">Artistic pieces and elegant accessories to beautify your living space</p>
+                    <div class="hero__stats">
+                        <div class="stat">
+                            <span class="stat__number">40+</span>
+                            <span class="stat__label">Décor Items</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">Artistic</span>
+                            <span class="stat__label">Design</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="hero__image">
-                <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg" alt="Décor Products">
+                <div class="hero__image">
+                    <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg" alt="Décor Products">
+                </div>
             </div>
         </div>
     </section>
@@ -86,18 +121,41 @@
         </div>
     </section>
 
-    <!-- Décor Products -->
-    <section class="products">
+    <!-- Filter Bar -->
+    <section class="filter__bar" id="filter-bar">
         <div class="container">
-            <h2 class="section__title">Décor Products</h2>
-            <div class="filter__tabs">
-                <button class="filter__btn active" data-filter="all">All Products</button>
-                <button class="filter__btn" data-filter="wall-art">Wall Art</button>
-                <button class="filter__btn" data-filter="lighting">Lighting</button>
-                <button class="filter__btn" data-filter="sculptures">Sculptures</button>
-                <button class="filter__btn" data-filter="textiles">Textiles</button>
+            <div class="filter__left">
+                <span class="filter__title">FILTERS</span>
+                <div class="filter__options">
+                    <select class="filter__select" id="category-filter">
+                        <option value="all">All Products</option>
+                        <option value="wall-art">Wall Art</option>
+                        <option value="lighting">Lighting</option>
+                        <option value="sculptures">Sculptures</option>
+                        <option value="textiles">Textiles</option>
+                    </select>
+                </div>
             </div>
-            <div class="products__grid" id="decor-products-grid">
+            <div class="filter__right">
+                <select class="sort__select" id="sort-select">
+                    <option value="recommended">Recommended</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">What's New</option>
+                    <option value="rating">Customer Rating</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Décor Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="products__header">
+                <h2>DÉCOR PRODUCTS</h2>
+                <span class="products__count" id="products-count">14 Items</span>
+            </div>
+            <div class="products__grid" id="products-grid">
                 <!-- Products will be loaded here -->
             </div>
         </div>
@@ -106,17 +164,32 @@
     <!-- Cart Sidebar -->
     <div class="cart__sidebar" id="cart-sidebar">
         <div class="cart__header">
-            <h3>Shopping Cart</h3>
-            <button class="cart__close" id="cart-close">&times;</button>
+            <h3>SHOPPING BAG</h3>
+            <button class="cart__close" id="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
         <div class="cart__items" id="cart-items">
-            <!-- Cart items will be dynamically added here -->
+            <!-- Cart items will be loaded here -->
         </div>
         <div class="cart__footer">
             <div class="cart__total">
-                <strong>Total: ₹<span id="cart-total">0</span></strong>
+                <span>Total: ₹<span id="cart-total">0</span></span>
             </div>
-            <button class="btn btn--primary cart__checkout">Checkout</button>
+            <button class="btn btn--primary cart__checkout">PLACE ORDER</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist__sidebar" id="wishlist-sidebar">
+        <div class="wishlist__header">
+            <h3>MY WISHLIST</h3>
+            <button class="wishlist__close" id="wishlist-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="wishlist__items" id="wishlist-items">
+            <!-- Wishlist items will be loaded here -->
         </div>
     </div>
 
@@ -127,23 +200,38 @@
                 <div class="footer__section">
                     <h3>AN Enterprises</h3>
                     <p>Premium home products for modern living</p>
+                    <div class="social__links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
                 <div class="footer__section">
-                    <h4>Quick Links</h4>
+                    <h4>CUSTOMER SERVICE</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="kitchen.html">Kitchen</a></li>
-                        <li><a href="decor.html">Décor</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Track Your Order</a></li>
+                        <li><a href="#">Return & Exchange</a></li>
+                        <li><a href="#">Size Guide</a></li>
                     </ul>
                 </div>
                 <div class="footer__section">
-                    <h4>Categories</h4>
+                    <h4>COMPANY</h4>
                     <ul>
-                        <li><a href="kitchen.html">Kitchen</a></li>
-                        <li><a href="decor.html">Décor</a></li>
-                        <li><a href="index.html#home">Smart Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>CONNECT</h4>
+                    <ul>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
                     </ul>
                 </div>
             </div>
