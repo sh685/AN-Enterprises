@@ -23,7 +23,22 @@ function initializeApp() {
 function setupEventListeners() {
     // Mobile menu toggle
     const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileNavLinks = document.querySelectorAll('.mobile__nav-link');
+    
     mobileToggle?.addEventListener('click', toggleMobileMenu);
+    
+    // Close mobile menu when clicking on nav links
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileToggle?.contains(e.target) && !mobileNav?.contains(e.target)) {
+            closeMobileMenu();
+        }
+    });
 
     // Cart and wishlist buttons
     const cartBtn = document.getElementById('cart-btn');
@@ -226,10 +241,22 @@ function updateCartUI() {
     const cartCount = document.getElementById('cart-count');
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
+    const cartCheckout = document.querySelector('.cart__checkout');
     
     // Update cart count
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     if (cartCount) cartCount.textContent = totalItems;
+    
+    // Update checkout button
+    if (cartCheckout) {
+        cartCheckout.onclick = () => {
+            if (cart.length > 0) {
+                window.location.href = 'checkout.html';
+            } else {
+                showNotification('Your cart is empty');
+            }
+        };
+    }
     
     // Update cart items
     if (cartItems) {
@@ -432,8 +459,23 @@ function toggleWishlist() {
 }
 
 function toggleMobileMenu() {
-    // Mobile menu functionality can be added here
-    console.log('Mobile menu toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    const body = document.body;
+    
+    if (mobileNav) {
+        mobileNav.classList.toggle('nav-open');
+        body.classList.toggle('nav-open');
+    }
+}
+
+function closeMobileMenu() {
+    const mobileNav = document.getElementById('mobile-nav');
+    const body = document.body;
+    
+    if (mobileNav) {
+        mobileNav.classList.remove('nav-open');
+        body.classList.remove('nav-open');
+    }
 }
 
 function setupScrollEffects() {
