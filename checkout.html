@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - AN Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__nav">
+                    <div class="nav__left">
+                        <a href="index.html" class="logo">
+                            <span class="logo__text">AN</span>
+                            <span class="logo__sub">Enterprises</span>
+                        </a>
+                        <nav class="nav__menu">
+                            <a href="index.html" class="nav__link">HOME</a>
+                            <a href="kitchen.html" class="nav__link">KITCHEN</a>
+                            <a href="decor.html" class="nav__link">DECOR</a>
+                            <a href="about.html" class="nav__link">ABOUT</a>
+                            <a href="contact.html" class="nav__link">CONTACT</a>
+                        </nav>
+                    </div>
+                    
+                    <div class="search__container">
+                        <div class="search__box">
+                            <i class="fas fa-search search__icon"></i>
+                            <input type="text" placeholder="Search for products, brands and more" class="search__input">
+                        </div>
+                    </div>
+                    
+                    <div class="nav__actions">
+                        <div class="action__item">
+                            <i class="far fa-user"></i>
+                            <span>Profile</span>
+                        </div>
+                        <div class="action__item" id="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                            <span>Wishlist</span>
+                            <span class="count" id="wishlist-count">0</span>
+                        </div>
+                        <div class="action__item" id="cart-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Bag</span>
+                            <span class="count" id="cart-count">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mobile__menu-toggle" id="mobile-toggle">
+                        <button aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile__nav" id="mobile-nav">
+            <nav class="mobile__nav-menu">
+                <a href="index.html" class="mobile__nav-link">HOME</a>
+                <a href="kitchen.html" class="mobile__nav-link">KITCHEN</a>
+                <a href="decor.html" class="mobile__nav-link">DECOR</a>
+                <a href="about.html" class="mobile__nav-link">ABOUT</a>
+                <a href="contact.html" class="mobile__nav-link">CONTACT</a>
+                <a href="return.html" class="mobile__nav-link">RETURNS</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="checkout" id="checkout">
+        <div class="container">
+            <div class="checkout__header">
+                <h1>Checkout</h1>
+                <p>Complete your order</p>
+            </div>
+            
+            <div class="checkout__container">
+                <!-- Checkout Form -->
+                <div class="checkout__form">
+                    <div class="form__section">
+                        <h3>Delivery Information</h3>
+                        <form id="checkout-form">
+                            <div class="form__group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                                <span class="error-message" id="fullName-error"></span>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required pattern="[6-9][0-9]{9}">
+                                <span class="error-message" id="phone-error"></span>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="email">Email (Optional)</label>
+                                <input type="email" id="email" name="email">
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="address">Full Address *</label>
+                                <textarea id="address" name="address" rows="3" required></textarea>
+                                <span class="error-message" id="address-error"></span>
+                            </div>
+                            
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="pincode">Pincode</label>
+                                    <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}">
+                                </div>
+                                
+                                <div class="form__group">
+                                    <label for="landmark">Landmark</label>
+                                    <input type="text" id="landmark" name="landmark">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="form__section">
+                        <h3>Payment Method</h3>
+                        <div class="payment__options">
+                            <div class="payment__option">
+                                <input type="radio" id="gpay" name="payment" value="gpay">
+                                <label for="gpay">
+                                    <i class="fab fa-google-pay"></i>
+                                    GPay / UPI (Prepay)
+                                </label>
+                            </div>
+                            
+                            <div class="payment__option">
+                                <input type="radio" id="cod" name="payment" value="cod" checked>
+                                <label for="cod">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    Cash On Delivery
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="upi__details" id="upi-details" style="display: none;">
+                            <div class="upi__info">
+                                <p><strong>UPI ID:</strong> yourupi@bank</p>
+                                <button type="button" class="btn btn--secondary" id="copy-upi">Copy UPI ID</button>
+                                <p class="upi__instruction">After paying, check the box below and click 'Place Final Order'</p>
+                                <label class="checkbox__label">
+                                    <input type="checkbox" id="payment-done">
+                                    <span class="checkmark"></span>
+                                    I have completed the payment
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form__section">
+                        <h3>Coupon Code</h3>
+                        <div class="coupon__container">
+                            <input type="text" id="coupon-code" placeholder="Enter coupon code">
+                            <button type="button" class="btn btn--secondary" id="apply-coupon">Apply</button>
+                        </div>
+                        <div class="coupon__message" id="coupon-message"></div>
+                    </div>
+                </div>
+                
+                <!-- Order Summary -->
+                <div class="order__summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary__items" id="summary-items">
+                        <!-- Items will be loaded here -->
+                    </div>
+                    
+                    <div class="summary__totals">
+                        <div class="total__row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">₹0</span>
+                        </div>
+                        <div class="total__row">
+                            <span>Shipping:</span>
+                            <span id="shipping">₹0</span>
+                        </div>
+                        <div class="total__row discount__row" id="discount-row" style="display: none;">
+                            <span>Discount:</span>
+                            <span id="discount">-₹0</span>
+                        </div>
+                        <div class="total__row total__final">
+                            <span>Total:</span>
+                            <span id="final-total">₹0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="checkout__actions">
+                        <button type="button" class="btn btn--secondary" id="back-to-cart">Back to Cart</button>
+                        <button type="button" class="btn btn--primary" id="place-order">Place Final Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3>Order Placed Successfully!</h3>
+                <button class="modal__close" id="close-success-modal">&times;</button>
+            </div>
+            <div class="modal__body">
+                <div class="success__icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <p>Your order has been created successfully!</p>
+                <p><strong>Order ID:</strong> <span id="order-id"></span></p>
+                <p>We have opened WhatsApp and Email for you to complete the order process.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fallback Modal -->
+    <div class="modal" id="fallback-modal">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3>Order Details</h3>
+                <button class="modal__close" id="close-fallback-modal">&times;</button>
+            </div>
+            <div class="modal__body">
+                <p>Please copy the order details below and send to our WhatsApp:</p>
+                <textarea id="order-details-text" readonly></textarea>
+                <button class="btn btn--primary" id="copy-order-details">Copy to Clipboard</button>
+                <p><strong>WhatsApp:</strong> +91XXXXXXXXXX</p>
+                <p><strong>Email:</strong> merchant@example.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>
