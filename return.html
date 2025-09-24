@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Request - AN Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__nav">
+                    <div class="nav__left">
+                        <a href="index.html" class="logo">
+                            <span class="logo__text">AN</span>
+                            <span class="logo__sub">Enterprises</span>
+                        </a>
+                        <nav class="nav__menu">
+                            <a href="index.html" class="nav__link">HOME</a>
+                            <a href="kitchen.html" class="nav__link">KITCHEN</a>
+                            <a href="decor.html" class="nav__link">DECOR</a>
+                            <a href="about.html" class="nav__link">ABOUT</a>
+                            <a href="contact.html" class="nav__link">CONTACT</a>
+                            <a href="return.html" class="nav__link active">RETURNS</a>
+                        </nav>
+                    </div>
+                    
+                    <div class="search__container">
+                        <div class="search__box">
+                            <i class="fas fa-search search__icon"></i>
+                            <input type="text" placeholder="Search for products, brands and more" class="search__input">
+                        </div>
+                    </div>
+                    
+                    <div class="nav__actions">
+                        <div class="action__item">
+                            <i class="far fa-user"></i>
+                            <span>Profile</span>
+                        </div>
+                        <div class="action__item" id="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                            <span>Wishlist</span>
+                            <span class="count" id="wishlist-count">0</span>
+                        </div>
+                        <div class="action__item" id="cart-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Bag</span>
+                            <span class="count" id="cart-count">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mobile__menu-toggle" id="mobile-toggle">
+                        <button aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile__nav" id="mobile-nav">
+            <nav class="mobile__nav-menu">
+                <a href="index.html" class="mobile__nav-link">HOME</a>
+                <a href="kitchen.html" class="mobile__nav-link">KITCHEN</a>
+                <a href="decor.html" class="mobile__nav-link">DECOR</a>
+                <a href="about.html" class="mobile__nav-link">ABOUT</a>
+                <a href="contact.html" class="mobile__nav-link">CONTACT</a>
+                <a href="return.html" class="mobile__nav-link active">RETURNS</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Return Request Section -->
+    <section class="checkout" id="return-request">
+        <div class="container">
+            <div class="checkout__header">
+                <h1>Return Request</h1>
+                <p>Request a return or exchange for your order</p>
+            </div>
+            
+            <div class="checkout__container">
+                <!-- Return Form -->
+                <div class="checkout__form">
+                    <div class="form__section">
+                        <h3>Order Information</h3>
+                        <form id="return-form">
+                            <div class="form__group">
+                                <label for="order-id">Order ID *</label>
+                                <select id="order-id-select" style="display: none;">
+                                    <option value="">Select from your orders</option>
+                                </select>
+                                <input type="text" id="order-id" name="orderId" required placeholder="ANE-YYYYMMDD-XXXX">
+                                <span class="error-message" id="order-id-error"></span>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="customer-name">Customer Name *</label>
+                                <input type="text" id="customer-name" name="customerName" required>
+                                <span class="error-message" id="customer-name-error"></span>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="customer-phone">Phone Number *</label>
+                                <input type="tel" id="customer-phone" name="customerPhone" required pattern="[6-9][0-9]{9}">
+                                <span class="error-message" id="customer-phone-error"></span>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="customer-email">Email (Optional)</label>
+                                <input type="email" id="customer-email" name="customerEmail">
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="form__section">
+                        <h3>Return Details</h3>
+                        <div class="form__group">
+                            <label for="return-reason">Reason for Return *</label>
+                            <textarea id="return-reason" name="returnReason" rows="4" required placeholder="Please describe the reason for your return request..."></textarea>
+                            <span class="error-message" id="return-reason-error"></span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label>Return Option *</label>
+                            <div class="payment__options">
+                                <div class="payment__option">
+                                    <input type="radio" id="refund" name="returnOption" value="refund" checked>
+                                    <label for="refund">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        Refund to Original Method
+                                    </label>
+                                </div>
+                                
+                                <div class="payment__option">
+                                    <input type="radio" id="exchange" name="returnOption" value="exchange">
+                                    <label for="exchange">
+                                        <i class="fas fa-exchange-alt"></i>
+                                        Exchange for Another Product
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Return Summary -->
+                <div class="order__summary">
+                    <h3>Return Information</h3>
+                    <div class="return__info">
+                        <div class="info__item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Processing Time</h4>
+                                <p>24-48 hours for review</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info__item">
+                            <i class="fas fa-shipping-fast"></i>
+                            <div>
+                                <h4>Return Shipping</h4>
+                                <p>Free return pickup available</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info__item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Return Policy</h4>
+                                <p>30-day return window</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="return__note">
+                        <p><strong>Note:</strong> Our team will review your request and confirm within 24 hours via WhatsApp or email.</p>
+                    </div>
+                    
+                    <div class="checkout__actions">
+                        <button type="button" class="btn btn--secondary" onclick="window.history.back()">Back</button>
+                        <button type="button" class="btn btn--primary" id="submit-return">Submit Return Request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="return-success-modal">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3>Return Request Submitted!</h3>
+                <button class="modal__close" id="close-return-success">&times;</button>
+            </div>
+            <div class="modal__body">
+                <div class="success__icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <p>Your return request has been submitted successfully!</p>
+                <p>We have opened WhatsApp and Email with your return details.</p>
+                <p>Our team will review and respond within 24 hours.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fallback Modal -->
+    <div class="modal" id="return-fallback-modal">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3>Return Request Details</h3>
+                <button class="modal__close" id="close-return-fallback">&times;</button>
+            </div>
+            <div class="modal__body">
+                <p>Please copy the return details below and send to our WhatsApp:</p>
+                <textarea id="return-details-text" readonly></textarea>
+                <button class="btn btn--primary" id="copy-return-details">Copy to Clipboard</button>
+                <p><strong>WhatsApp:</strong> +91XXXXXXXXXX</p>
+                <p><strong>Email:</strong> merchant@example.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart__sidebar" id="cart-sidebar">
+        <div class="cart__header">
+            <h3>SHOPPING BAG</h3>
+            <button class="cart__close" id="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart__items" id="cart-items">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart__footer">
+            <div class="cart__total">
+                <span>Total: ₹<span id="cart-total">0</span></span>
+            </div>
+            <button class="btn btn--primary cart__checkout">PLACE ORDER</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist__sidebar" id="wishlist-sidebar">
+        <div class="wishlist__header">
+            <h3>MY WISHLIST</h3>
+            <button class="wishlist__close" id="wishlist-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="wishlist__items" id="wishlist-items">
+            <!-- Wishlist items will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>AN Enterprises</h3>
+                    <p>Premium home products for modern living</p>
+                    <div class="social__links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <h4>CUSTOMER SERVICE</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="return.html">Return Product</a></li>
+                        <li><a href="#">Track Your Order</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>COMPANY</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>CONNECT</h4>
+                    <ul>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 AN Enterprises. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="return.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
