@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AN Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__nav">
+                    <div class="nav__left">
+                        <a href="index.html" class="logo">
+                            <span class="logo__text">AN</span>
+                            <span class="logo__sub">Enterprises</span>
+                        </a>
+                        <nav class="nav__menu">
+                            <a href="index.html" class="nav__link">HOME</a>
+                            <a href="kitchen.html" class="nav__link">KITCHEN</a>
+                            <a href="decor.html" class="nav__link">DECOR</a>
+                            <a href="about.html" class="nav__link active">ABOUT</a>
+                            <a href="contact.html" class="nav__link">CONTACT</a>
+                        </nav>
+                    </div>
+                    
+                    <div class="search__container">
+                        <div class="search__box">
+                            <i class="fas fa-search search__icon"></i>
+                            <input type="text" placeholder="Search for products, brands and more" class="search__input">
+                        </div>
+                    </div>
+                    
+                    <div class="nav__actions">
+                        <div class="action__item">
+                            <i class="far fa-user"></i>
+                            <span>Profile</span>
+                        </div>
+                        <div class="action__item" id="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                            <span>Wishlist</span>
+                            <span class="count" id="wishlist-count">0</span>
+                        </div>
+                        <div class="action__item" id="cart-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Bag</span>
+                            <span class="count" id="cart-count">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mobile__menu-toggle" id="mobile-toggle">
+                        <button aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile__nav" id="mobile-nav">
+            <nav class="mobile__nav-menu">
+                <a href="index.html" class="mobile__nav-link">HOME</a>
+                <a href="kitchen.html" class="mobile__nav-link">KITCHEN</a>
+                <a href="decor.html" class="mobile__nav-link">DECOR</a>
+                <a href="about.html" class="mobile__nav-link active">ABOUT</a>
+                <a href="contact.html" class="mobile__nav-link">CONTACT</a>
+                <a href="return.html" class="mobile__nav-link">RETURNS</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1>About AN Enterprises</h1>
+                <p>Premium home products for modern living</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about__content">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__text">
+                    <h2>Our Story</h2>
+                    <p>Founded with a vision to transform homes across India, AN Enterprises has been at the forefront of providing premium home products that combine functionality with aesthetic appeal. We believe that every home deserves beautiful, high-quality products that enhance daily living.</p>
+                    
+                    <p>Our journey began with a simple mission: to make premium home essentials accessible to everyone. From kitchen appliances that make cooking a joy to décor items that reflect your personality, we curate products that meet the highest standards of quality and design.</p>
+                    
+                    <h3>Our Vision</h3>
+                    <p>To be India's most trusted destination for home essentials, where quality meets affordability and style meets functionality.</p>
+                    
+                    <h3>Our Mission</h3>
+                    <p>We are committed to providing our customers with carefully selected products that enhance their lifestyle, backed by exceptional service and competitive prices.</p>
+                </div>
+                
+                <div class="about__image">
+                    <img src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg" alt="About AN Enterprises">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values">
+        <div class="container">
+            <h2 class="section__title">Our Values</h2>
+            <div class="values__grid">
+                <div class="value__item">
+                    <div class="value__icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Quality First</h3>
+                    <p>We source only the finest products from trusted manufacturers, ensuring every item meets our strict quality standards.</p>
+                </div>
+                
+                <div class="value__item">
+                    <div class="value__icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Customer Focused</h3>
+                    <p>Our customers are at the heart of everything we do. We strive to exceed expectations with every interaction.</p>
+                </div>
+                
+                <div class="value__item">
+                    <div class="value__icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainable</h3>
+                    <p>We are committed to environmental responsibility, choosing products and practices that minimize our ecological footprint.</p>
+                </div>
+                
+                <div class="value__item">
+                    <div class="value__icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Trust & Integrity</h3>
+                    <p>We build lasting relationships through honest communication, fair pricing, and reliable service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats__grid">
+                <div class="stat__item">
+                    <div class="stat__number">10,000+</div>
+                    <div class="stat__label">Happy Customers</div>
+                </div>
+                
+                <div class="stat__item">
+                    <div class="stat__number">500+</div>
+                    <div class="stat__label">Products</div>
+                </div>
+                
+                <div class="stat__item">
+                    <div class="stat__number">50+</div>
+                    <div class="stat__label">Cities Served</div>
+                </div>
+                
+                <div class="stat__item">
+                    <div class="stat__number">5</div>
+                    <div class="stat__label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart__sidebar" id="cart-sidebar">
+        <div class="cart__header">
+            <h3>SHOPPING BAG</h3>
+            <button class="cart__close" id="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart__items" id="cart-items">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart__footer">
+            <div class="cart__total">
+                <span>Total: ₹<span id="cart-total">0</span></span>
+            </div>
+            <button class="btn btn--primary cart__checkout">PLACE ORDER</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist__sidebar" id="wishlist-sidebar">
+        <div class="wishlist__header">
+            <h3>MY WISHLIST</h3>
+            <button class="wishlist__close" id="wishlist-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="wishlist__items" id="wishlist-items">
+            <!-- Wishlist items will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>AN Enterprises</h3>
+                    <p>Premium home products for modern living</p>
+                    <div class="social__links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <h4>CUSTOMER SERVICE</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Track Your Order</a></li>
+                        <li><a href="#">Return & Exchange</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>COMPANY</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>CONNECT</h4>
+                    <ul>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 AN Enterprises. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
